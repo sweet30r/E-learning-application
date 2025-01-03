@@ -1,0 +1,39 @@
+BEGIN
+  Display student dashboard
+  Wait for user interaction
+
+  IF user clicks on "View Courses" THEN
+      Retrieve and display list of available courses
+      Wait for user interaction
+      IF user selects a course THEN
+          Display course details
+          IF user clicks "Enroll" THEN
+              Enroll student in the course
+              Display "Enrollment successful" message
+          ENDIF
+      ENDIF
+  ENDIF
+
+  IF user clicks on "My Courses" THEN
+      Retrieve and display list of enrolled courses
+      Wait for user interaction
+      IF user selects a course THEN
+          Display course content and progress
+      ENDIF
+  ENDIF
+
+  IF user clicks on "View Profile" THEN
+      Retrieve and display student profile details
+      Wait for user interaction
+      IF user clicks "Edit Profile" THEN
+          Allow user to update profile details
+          Save updated details
+          Display "Profile updated" message
+      ENDIF
+  ENDIF
+
+  IF user clicks on "Logout" THEN
+      End session
+      Redirect to homepage
+  ENDIF
+END
