@@ -1,0 +1,50 @@
+BEGIN
+  Display teacher dashboard
+  Wait for user interaction
+
+  IF user clicks on "Create Course" THEN
+      Display course creation form
+      Wait for user input (course title, description, content, etc.)
+      IF submit button is clicked THEN
+          Validate inputs
+          IF inputs are valid THEN
+              Save course details to the database
+              Display "Course created successfully" message
+          ELSE
+              Display "Invalid input" message
+          ENDIF
+      ENDIF
+  ENDIF
+
+  IF user clicks on "Manage Courses" THEN
+      Retrieve and display list of created courses
+      Wait for user interaction
+      IF user selects a course THEN
+          Display course details
+          IF user clicks "Edit Course" THEN
+              Allow user to update course details
+              Save updated details
+              Display "Course updated successfully" message
+          ENDIF
+          IF user clicks "Delete Course" THEN
+              Delete course from the database
+              Display "Course deleted successfully" message
+          ENDIF
+      ENDIF
+  ENDIF
+
+  IF user clicks on "View Profile" THEN
+      Retrieve and display teacher profile details
+      Wait for user interaction
+      IF user clicks "Edit Profile" THEN
+          Allow user to update profile details
+          Save updated details
+          Display "Profile updated" message
+      ENDIF
+  ENDIF
+
+  IF user clicks on "Logout" THEN
+      End session
+      Redirect to homepage
+  ENDIF
+END
