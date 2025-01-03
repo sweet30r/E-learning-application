@@ -1,0 +1,24 @@
+BEGIN
+  Display sign-in form
+  Wait for user input (username and password)
+  IF submit button is clicked THEN
+      Retrieve entered username and password
+      Validate inputs (check for empty fields)
+      IF inputs are valid THEN
+          Connect to the database
+          Check if username exists
+          IF username exists THEN
+              Verify password
+              IF password matches THEN
+                  Redirect to homepage
+              ELSE
+                  Display "Incorrect password" message
+              ENDIF
+          ELSE
+              Display "User does not exist" message
+          ENDIF
+      ELSE
+          Display "Please fill in all fields" message
+      ENDIF
+  ENDIF
+END
