@@ -26,10 +26,8 @@ BEGIN
               Save updated details
               Display "Course updated successfully" message
           ENDIF
-          IF user clicks "Delete Course" THEN
-              Delete course from the database
-              Display "Course deleted successfully" message
-          ENDIF
+
+        
       ENDIF
   ENDIF
 
