@@ -1,0 +1,21 @@
+BEGIN
+  Display sign-up form
+  Wait for user input (username, email, password, confirm password)
+  IF submit button is clicked THEN
+      Retrieve entered details
+      Validate inputs (check for empty fields, valid email format, password match)
+      IF inputs are valid THEN
+          Connect to the database
+          Check if username or email already exists
+          IF username or email exists THEN
+              Display "Username or email already exists" message
+          ELSE
+              Save user details in the database
+              Display "Sign-up successful" message
+              Redirect to sign-in page
+          ENDIF
+      ELSE
+          Display "Invalid input" message
+      ENDIF
+  ENDIF
+END
